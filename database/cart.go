@@ -1,6 +1,12 @@
 package database
 
-import "errors"
+import (
+	"context"
+	"errors"
+
+	"go.mongodb.org/mongo-driver/bson/primitive"
+	"go.mongodb.org/mongo-driver/v2/mongo"
+)
 
 var (
 	ErrCanNotFindProduct    = errors.New("can't find the product")
@@ -12,18 +18,33 @@ var (
 	ErrCanNotBuyCartItem    = errors.New("can't update the purchase")
 )
 
-func AddProductToCart() {
-
+func AddProductToCart(ctx context.Context,
+	productCollection,
+	userCollection *mongo.Collection,
+	productID primitive.ObjectID,
+	userID string,
+) error {
+	return errors.New("")
 }
 
-func RemoveCartItem() {
-
+func RemoveCartItem(ctx context.Context,
+	productCollection,
+	userCollection *mongo.Collection,
+	productID primitive.ObjectID,
+	userID string,
+) error {
+	return errors.New("")
 }
 
 func BuyItemFromCart() {
 
 }
 
-func InstantBuy() {
-
+func InstantBuy(ctx context.Context,
+	productCollection,
+	userCollection *mongo.Collection,
+	productID primitive.ObjectID,
+	userID string,
+) error {
+	return errors.New("")
 }
