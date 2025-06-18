@@ -36,8 +36,12 @@ func RemoveCartItem(ctx context.Context,
 	return errors.New("")
 }
 
-func BuyItemFromCart() {
-
+func BuyItemFromCart(ctx context.Context,
+	productCollection,
+	userCollection *mongo.Collection,
+	userID string,
+) error {
+	return errors.New("")
 }
 
 func InstantBuy(ctx context.Context,
